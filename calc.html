@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let txtnum1=document.createElement('input') // <input>
+        txtnum1.setAttribute('type','text') // <input type="text">
+        txtnum1.setAttribute('id','numero1')
+        txtnum1.setAttribute('name','number1')
+        txtnum1.setAttribute('placeholder','Ingrese numero')
+
+        let txtnum2=document.createElement('input') // <input>
+        txtnum2.setAttribute('type','text') // <input type="text">
+        txtnum2.setAttribute('id','numero2')
+        txtnum2.setAttribute('name','number2')
+        txtnum2.setAttribute('placeholder','Ingrese otro numero')
+
+        let salto=document.createElement('br')
+
+        let boton1=document.createElement('input') // <input>
+        boton1.setAttribute('type','button') // 
+        boton1.setAttribute('id','btn1')
+        boton1.setAttribute('name','btn1')
+        boton1.setAttribute('value','SUMA')
+
+        let boton2=document.createElement('input') // <input>
+        boton2.setAttribute('type','button') // 
+        boton2.setAttribute('id','btn2')
+        boton2.setAttribute('name','btn2')
+        boton2.setAttribute('value','RESTA')
+
+       
+        // agregar el nodo a la pagina (body)
+        document.body.appendChild(txtnum1)
+        document.body.appendChild(txtnum2)
+        document.body.appendChild(salto)
+        document.body.appendChild(boton1)
+        document.body.appendChild(boton2)
+
+        // eventos
+
+        boton1.addEventListener('click',()=>{
+            let n1=parseInt(txtnum1.value)
+            let n2=parseInt(txtnum2.value)
+            let t=n1+n2
+            alert('la suma es '+t)
+        })
+
+        boton2.addEventListener('click',()=>{
+            let n1=parseInt(txtnum1.value)
+            let n2=parseInt(txtnum2.value)
+            let t=n1-n2
+            alert('la resta es '+t)
+        })
+
+    </script>
+</body>
+</html>
